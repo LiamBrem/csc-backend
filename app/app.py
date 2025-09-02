@@ -5,7 +5,7 @@ app = FastAPI(title="Pitt CS Course Advisor - MCP Server")
 
 @app.get("/courses")
 def get_courses():
-    with open("course_data.json", "r") as f:
+    with open("/api/mcp/course_data.json", "r") as f:
         data = json.load(f)
     return data
 
